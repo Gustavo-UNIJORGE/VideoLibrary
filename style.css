@@ -1,0 +1,82 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 58px 1fr;
+}
+
+nav {
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5em;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>* {
+    display: flex;
+    align-items: center;
+}
+nav .brand {
+    margin-right: auto;
+}
+nav .searchbar {
+    flex-grow: 1;
+}
+nav:last-child {
+    margin-left: auto;
+}
+
+form.searchbar {
+    display: flex;
+    flex-flow: row;
+    border: solid red 3px;
+    border-radius: 16px;
+}
+form.searchbar>.bar{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+form.searchbar input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 24px;
+    border-radius: inherit;
+}
+button {
+    height: 64px;
+    width: 64px;
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    border: solid thin transparent;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(128, 128, 128, 0.452);
+}
+button>img {
+    height: inherit;
+    width: inherit;
+    
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    
+}
+main {
+    color: #fff;
+    background-color: #111111;
+}
+main.container {
+    display: grid;
+    
+}
