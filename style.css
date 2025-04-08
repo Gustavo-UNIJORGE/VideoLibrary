@@ -11,6 +11,10 @@
     src: url('/fonts/youtube-sans-bold.ttf') format('truetype');
 }
 
+html {
+    font-size: 10px;
+}
+
 * { 
     margin: 0;
     padding: 0;
@@ -63,32 +67,50 @@ nav>#center {
 nav span {
     font-family: 'Youtube Sans Medium', sans-serif;
 }
+/* ------------------ Botões ------------------ */
 button {
-
     background-color: transparent;
     color: white;
     font-weight: 700;
     border: solid thin transparent;
     cursor: pointer;
 }
-button:hover {
-    background-color: rgba(128, 128, 128, 0.452);
-}
+
 button>img {
     height: inherit;
     width: inherit;
     object-fit: cover;
     aspect-ratio: 1/1;   
+    
 }
 button.icon-button {
     height: 64px;
     width: 64px;
     border-radius: 50%;
+
 }
 button.primary-button {
-    font-size: 20px;
-    background-color: black;
+    padding: 0 1em;
+    background-color: #242424;
+    color: white;
+    border-radius: 32px;
 }
+button.secondary-button {
+    padding: 0 1em;
+    background-color: white;
+    color: black;
+    border-radius: 32px;
+}
+button:hover {
+    background-color: rgba(128, 128, 128, 0.452);
+    transition: background-color ease-in-out 0.25s;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+/* ------------------ Search ------------------ */
 .search-form {
     display: flex;
     flex-flow: row;
@@ -136,6 +158,8 @@ button.primary-button {
     border: none;
 }
 
+/* ------------------ Vertical Nav Bar ------------------ */
+
 nav#vertical-nav {
     background-color: black;
     display: flex;
@@ -151,6 +175,105 @@ nav#vertical-nav button {
     justify-content: center;
     align-items: center;
 }
+/* ------------------ * ------------------ */
+main {
+    color: #fff;
+    background-color: #111111;
+}
+/* ------------------ Description ------------------ */
+main #center>.description {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.4em;
+}
+main #center #video-title {
+    font-size: 1.75em;
+    padding: 0.3em 0 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main .description span, h3 { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main #center .description-header {
+    padding: 0.3em 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    gap: 1em;
+}
+main #center .description-header>.container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    gap: 1em;
+}
+main#center .description-header>.container#end {
+    margin-left: 24px;
+}
+.channel-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 24px;
+    align-items: center;
+}
+/* Channel Profile Photo */
+.channel-image-container {
+    margin-right: 12px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.channel-image-container img{
+    display: block;
+/*     margin-right: 12px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden; */
+    object-fit: cover;
+    overflow: clip;
+    cursor: pointer;
+    background: transparent;
+}
+.channel-container>.channel-details-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.channel-container>.channel-details-container h3 {
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.channel-container>.channel-details-container span {
+    color: #9b9b9b;
+}
+
+main .description-header .feedback-shape {
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: end;
+}
+
+main .description-header .feedback-shape *:first-child {
+    padding: 0;
+    padding-left: 0.5em;
+    border-radius: 32px 0 0 32px;
+}
+
+main .description-header .feedback-shape *:last-child {
+    padding: 0.5em;
+    border-radius:  0 32px 32px 0;
+}
+
+
+
+
+/* ------------------ Media Queries ------------------ */
 
 @media (min-width: 450px) {
     nav {
@@ -185,25 +308,4 @@ nav#vertical-nav button {
         grid-template-rows: 1fr 1fr;
 
     }
-}
-
-main #center>.description-container {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-main #center .description-header-container {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-figure.channel-image-container img {
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
-    object-fit: cover;
-}
-main {
-    color: #fff;
-    background-color: #111111;
 }

@@ -113,22 +113,44 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            <div class="description-container">
+            <div class="description">
                 <h2 id="video-title">Titulo do Vídeo</h2>
-                <div class="description-header-container">
-                    <figure class="channel-image-container">
-                        <img src="images/img.jfif" />
-                    </figure>
-                    <div>
-                        <h3>Gustavo Gaiofato</h3>
-                        <span>367 mil inscritos</span>
-                    </div>
+                <div class="description-header">
+                    <a class="channel-container">
+                        <div class="channel-image-container">
+                            <img draggable="false" width="40" src="images/img.jfif" />
+                        </div>
+                        <div class="channel-details-container">
+                            <h3>Gustavo Gaiofato</h3>
+                            <span>367 mil inscritos</span>
+                        </div>
+                    </a>
                     <button class="primary-button">
-                        Seja Membro
+                        <span>Seja Membro</span>
                     </button>
                     <button class="secondary-button">
-                        Inscreva-se
+                        <span>Inscreva-se</span>
                     </button>
+
+                    <div class="feedback-shape">
+                        <button class="primary-button">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <span id="likes-count">5,5 mil</span>
+                        </button>
+                        <button class="primary-button">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="container" id="end">
+                        <button class="primary-button">
+                            <i class="fa-regular fa-share-from-square"></i>
+                            <span>Compartilhar</span>
+                        </button>
+                        <button class="primary-button">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
