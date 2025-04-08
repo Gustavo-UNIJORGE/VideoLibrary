@@ -29,7 +29,7 @@
     </script>
     <nav>
         <div id="start">
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <span class="brand">
@@ -47,60 +47,89 @@
                     
                     <button 
                         type="reset"    
-                        id="clear-search-button">
+                        id="clear-search-button"
+                        class="icon-button">
                         <i class="fa-solid fa-x"></i>
                     </button>
                 </div>
     
                 <button 
                     type="submit"
-                    id="submit-search-button">
+                    id="submit-search-button"
+                    class="icon-button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-    <!--             <button>
+                <!--             
+                <button>
                     <i class="fa-solid fa-microphone"></i>
-                </button> -->
+                </button> 
+                -->
             </form>
         </div>
         <div id="end">
-            <button>
+            <button class="icon-button">
                 <!-- <input type="file"> -->
                 <i class="fa-solid fa-upload"></i>
             </button>
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-bell"></i>
             </button>
-            <button>
+            <button class="icon-button">
                 <img src="images/img.jfif" />
             </button>
         </div>
     </nav>
     <main class="container">
         <nav id="vertical-nav">
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-home"></i>
                 <span>Home</span>
             </button>
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-chart-simple"></i>
                 <span>Shorts</span>
             </button>
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-film"></i>
                 <span>Inscrições</span>
             </button>
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-user"></i>
                 <span>Você</span>
             </button>
-            <button>
+            <button class="icon-button">
                 <i class="fa-solid fa-clock"></i>
                 <span>Histórcio</span>
             </button>
         </nav>
-        <div>
-            video
-            <div>
+        <div id="center">
+            <div id="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/xaHX_GEnP3M"
+                    title="youtube_video_player"
+                    frameborder="0" 
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="description-container">
+                <h2 id="video-title">Titulo do Vídeo</h2>
+                <div class="description-header-container">
+                    <figure class="channel-image-container">
+                        <img src="images/img.jfif" />
+                    </figure>
+                    <div>
+                        <h3>Gustavo Gaiofato</h3>
+                        <span>367 mil inscritos</span>
+                    </div>
+                    <button class="primary-button">
+                        Seja Membro
+                    </button>
+                    <button class="secondary-button">
+                        Inscreva-se
+                    </button>
+                </div>
             </div>
         </div>
         <div>
