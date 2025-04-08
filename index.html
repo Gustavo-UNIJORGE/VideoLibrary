@@ -28,35 +28,39 @@
         })
     </script>
     <nav>
-        <div class="brand">
+        <div id="start">
             <button>
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <span>YouTube<sup>BR</sup></span>
+            <span class="brand">
+                YouTube<sup>BR</sup>
+            </span>
         </div>
-        <form class="search-form">
-            <div class="bar">
-                <input 
-                    type="text" 
-                    placeholder="Pesquisar"
-                    oninput="showClearSearchButton(this)"
-                    />
-                
-                <button 
-                    type="reset"    
-                    id="clear-search-button">
-                    <i class="fa-solid fa-x"></i>
+        <div id="center">
+            <form class="search-form">
+                <div class="bar">
+                    <input 
+                        type="text" 
+                        placeholder="Pesquisar"
+                        oninput="showClearSearchButton(this)"
+                        />
+                    
+                    <button 
+                        type="reset"    
+                        id="clear-search-button">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+    
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </div>
-
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-<!--             <button>
-                <i class="fa-solid fa-microphone"></i>
-            </button> -->
-        </form>
-        <div class="endbar">
+    <!--             <button>
+                    <i class="fa-solid fa-microphone"></i>
+                </button> -->
+            </form>
+        </div>
+        <div id="end">
             <button>
                 <!-- <input type="file"> -->
                 <i class="fa-solid fa-upload"></i>
