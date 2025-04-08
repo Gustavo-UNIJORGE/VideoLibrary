@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'Youtube Sans Medium';
+    src: url('/fonts/youtube-sans-medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Youtube Sans Bold';
+    src: url('/fonts/youtube-sans-bold.ttf') format('truetype');
+}
+
 * { 
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Youtube Sans Medium', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -24,33 +33,45 @@ nav>* {
     display: flex;
     align-items: center;
 }
-nav .brand {
-    margin-right: auto;
+nav .brand{
+    font-family: 'Youtube Sans Bold', sans-serif;
 }
-nav .searchbar {
+nav .brand span>sup {
+    position: absolute;
+    top: 1em;
+    font-size: 12px;
+}
+nav .search-form {
     flex-grow: 1;
 }
 nav:last-child {
     margin-left: auto;
 }
 
-form.searchbar {
+.search-form {
     display: flex;
     flex-flow: row;
     border: solid red 3px;
     border-radius: 16px;
 }
-form.searchbar>.bar{
+.search-form>.bar{
     flex-grow: 1;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 }
-form.searchbar input[type="search"] {
+.search-form input[type="text"] {
     width: 100%;
     padding: 8px;
     font-size: 24px;
     border-radius: inherit;
+    border: none;
+    outline: none;
+}
+.search-form input[type="text"]:focus {
+    border: none;
+    outline: none;
 }
 button {
     height: 64px;
@@ -67,10 +88,14 @@ button:hover {
 button>img {
     height: inherit;
     width: inherit;
-    
     object-fit: cover;
-    aspect-ratio: 1/1;
-    
+    aspect-ratio: 1/1;   
+}
+button#clear-search-button {
+    display: block;
+}
+button#clear-search-button.hidden {
+    display: none;
 }
 main {
     color: #fff;

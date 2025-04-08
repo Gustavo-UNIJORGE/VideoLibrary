@@ -8,18 +8,43 @@
     <script src="https://kit.fontawesome.com/2e9058513c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+
+        function showClearSearchButton(input) {
+            let clearSearchButton = document.getElementById("clear-search-button");
+
+            if(input.value != "") {
+                if(clearSearchButton.classList.contains("hidden"))
+                    clearSearchButton.classList.remove("hidden");
+            } else {
+                if(!clearSearchButton.classList.contains("hidden"))
+                    clearSearchButton.classList.add("hidden")
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            let clearSearchButton = document.getElementById("clear-search-button");
+
+            clearSearchButton.classList.toggle("hidden");
+        })
+    </script>
     <nav>
         <div class="brand">
             <button>
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <span>Youtube</span>
+            <span>YouTube<sup>BR</sup></span>
         </div>
-        <form class="searchbar">
+        <form class="search-form">
             <div class="bar">
-                <input type="search" />
+                <input 
+                    type="text" 
+                    placeholder="Pesquisar"
+                    oninput="showClearSearchButton(this)"
+                    />
                 
-                <button type="reset">
+                <button 
+                    type="reset"    
+                    id="clear-search-button">
                     <i class="fa-solid fa-x"></i>
                 </button>
             </div>
@@ -27,11 +52,11 @@
             <button type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+<!--             <button>
+                <i class="fa-solid fa-microphone"></i>
+            </button> -->
         </form>
         <div class="endbar">
-            <button>
-                <i class="fa-solid fa-microphone"></i>
-            </button>
             <button>
                 <!-- <input type="file"> -->
                 <i class="fa-solid fa-upload"></i>
@@ -48,7 +73,6 @@
         <div>
             video
             <div>
-                <img src="https://placehold.co/1260x710"/>
             </div>
         </div>
         <div>
@@ -57,16 +81,12 @@
                 Propaganda
             </div>
             <div>
-                <img src="https://placehold.co/168x94"/>
             </div>
             <div>
-                <img src="https://placehold.co/168x94"/>
             </div>
             <div>
-                <img src="https://placehold.co/168x94"/>
             </div>
             <div>
-                <img src="https://placehold.co/168x94"/>
             </div>
         </div>
         <div>
