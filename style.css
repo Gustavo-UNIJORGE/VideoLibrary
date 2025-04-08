@@ -82,6 +82,17 @@ nav>#center {
     border: none;
     outline: none;
 }
+#vertical-nav {
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#vertical-nav button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 button {
     height: 64px;
     width: 64px;
@@ -113,6 +124,6 @@ main {
 main.container {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 64px 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
