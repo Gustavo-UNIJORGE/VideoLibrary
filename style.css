@@ -188,7 +188,7 @@ main {
     background-color: #111111;
 }
 /* ------------------ Description ------------------ */
-main #center>.description {
+main #center>#description {
     display: flex;
     flex-flow: column nowrap;
     font-size: 1.4em;
@@ -198,8 +198,12 @@ main #center #video-title {
     padding: 0.3em 0 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-main .description span, h3 { 
+main #description span, h3 { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main #description.hidden {
+    height: 120px;
 }
 
 main #center .description-header {
