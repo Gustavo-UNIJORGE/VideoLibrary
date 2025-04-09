@@ -31,9 +31,6 @@
                 descriptionContainer = document.querySelector("#description .description-body.hidden")
             }
             
-            console.log(descriptionContainer)
-            console.log(hideButton.innerText)
-            
             descriptionContainer.classList.toggle("hidden")
             
             if(descriptionContainer.classList.contains("hidden")) {
@@ -44,8 +41,11 @@
         }
         document.addEventListener("DOMContentLoaded", function () {
             let clearSearchButton = document.getElementById("clear-search-button");
+            let descriptionContainer = document.querySelector("#description .description-body"); 
 
             clearSearchButton.classList.toggle("hidden");
+
+            descriptionContainer.classList.toggle("hidden");
         })
 
     </script>
