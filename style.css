@@ -202,9 +202,6 @@ main #description span, h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main #description.hidden {
-    height: 120px;
-}
 
 main #center .description-header {
     padding: 0.75em;

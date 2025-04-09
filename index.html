@@ -21,11 +21,19 @@
                     clearSearchButton.classList.add("hidden")
             }
         }
+
+        function showHiddenDescription() {
+            let descriptionContainer = document.getElementById("description")
+            
+            descriptionContainer.classList.toggle("hidden")
+            
+        }
         document.addEventListener("DOMContentLoaded", function () {
             let clearSearchButton = document.getElementById("clear-search-button");
 
             clearSearchButton.classList.toggle("hidden");
         })
+
     </script>
     <nav>
         <div id="start">
@@ -200,7 +208,7 @@
                     </div>
                     <br>
                     <button
-                        onclick="toggleDescription()">
+                        onclick="showHiddenDescription()">
                         Mostrar menos
                     </button>
                 </div>
