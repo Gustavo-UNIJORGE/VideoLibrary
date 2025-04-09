@@ -12,7 +12,7 @@
 
         function showClearSearchButton(input) {
             let clearSearchButton = document.getElementById("clear-search-button");
-
+            
             if(input.value != "") {
                 if(clearSearchButton.classList.contains("hidden"))
                     clearSearchButton.classList.remove("hidden");
@@ -23,10 +23,24 @@
         }
 
         function showHiddenDescription() {
-            let descriptionContainer = document.getElementById("description")
+            let descriptionContainer;
+            let hideButton = document.getElementById('hideDescriptionButton');
+            if (document.querySelector("#description .description-body")) {
+                descriptionContainer = document.querySelector("#description .description-body")
+            } else if (document.querySelector("#description .description-body.hidden")){ 
+                descriptionContainer = document.querySelector("#description .description-body.hidden")
+            }
+            
+            console.log(descriptionContainer)
+            console.log(hideButton.innerText)
             
             descriptionContainer.classList.toggle("hidden")
             
+            if(descriptionContainer.classList.contains("hidden")) {
+                hideButton.textContent = "Mostrar mais"
+            } else { 
+                hideButton.textContent = "Mostrar menos";
+            }
         }
         document.addEventListener("DOMContentLoaded", function () {
             let clearSearchButton = document.getElementById("clear-search-button");
@@ -208,6 +222,7 @@
                     </div>
                     <br>
                     <button
+                        id="hideDescriptionButton"
                         onclick="showHiddenDescription()">
                         Mostrar menos
                     </button>

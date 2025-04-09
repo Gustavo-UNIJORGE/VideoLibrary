@@ -272,6 +272,7 @@ main .description-header .feedback-shape *:last-child {
     padding: 0.5em;
     border-radius:  0 32px 32px 0;
 }
+
 main .description-body { 
     font-size: 1.1em;
     padding: 1em;
@@ -304,6 +305,7 @@ main .description-body #transcription-section p {
 }
 
 main .description-body>p {
+
     text-align: justify;
 }
 main .description-body>h2 {
@@ -312,6 +314,27 @@ main .description-body>h2 {
 }
 main .description-body>button {
     font-size: 1em;
+}
+
+
+main .description-body.hidden {
+    height: auto;    
+}
+main .description-body.hidden>p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-wrap: wrap;
+    text-overflow: ellipsis;
+}
+main .description-body.hidden>#transcription-section {
+    display: none;
+}
+main .description-body.hidden>.channel-container {
+    display: none;
 }
 /* ------------------ Media Queries ------------------ */
 
