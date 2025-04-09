@@ -96,7 +96,7 @@ button.primary-button {
     color: white;
     border-radius: 32px;
 }
-button.secondary-button {
+button.secondary-button, main .related-buttons-list button.selected {
     padding: 0 1em;
     background-color: white;
     color: black;
@@ -217,7 +217,7 @@ main #center .description-header>.container {
     align-content: center;
     gap: 1em;
 }
-main#center .description-header>.container#end {
+main #center .description-header>.container#end {
     margin-left: 24px;
 }
 .channel-container {
@@ -336,6 +336,23 @@ main .description-body.hidden>#transcription-section {
 main .description-body.hidden>.channel-container {
     display: none;
 }
+
+main .related-buttons-list {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1em;
+    margin: 2em;
+    gap: 1em;
+}
+
+main .related-buttons-list button {
+    padding: 1em 1.5em;
+    background-color: #242424;
+    color: white;
+    border-radius: 24px;
+}
+
+
 /* ------------------ Media Queries ------------------ */
 
 @media (min-width: 450px) {
