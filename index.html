@@ -30,6 +30,7 @@
             } else if (document.querySelector("#description .description-body.hidden")){ 
                 descriptionContainer = document.querySelector("#description .description-body.hidden")
             }
+            let descriptionRow = document.querySelector('#description .contacts-row');
             
             descriptionContainer.classList.toggle("hidden")
             
@@ -41,11 +42,11 @@
         }
         document.addEventListener("DOMContentLoaded", function () {
             let clearSearchButton = document.getElementById("clear-search-button");
-            let descriptionContainer = document.querySelector("#description .description-body"); 
+            let descriptionText = document.querySelector('#description .description-body'); 
 
             clearSearchButton.classList.toggle("hidden");
 
-            descriptionContainer.classList.toggle("hidden");
+            descriptionText.classList.toggle("hidden");
         })
 
     </script>
@@ -206,7 +207,7 @@
                             <span>367 mil inscritos</span>
                         </div>
                     </a>
-                    <div>
+                    <div class="contacts-row">
                         <button>
                             <i class="fa-solid fa-film"></i>
                             <span>Videos</span>
