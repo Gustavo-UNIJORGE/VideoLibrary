@@ -316,7 +316,6 @@ main .description-body>button {
     font-size: 1em;
 }
 
-
 main .description-body.hidden {
     height: auto;    
 }
@@ -353,9 +352,18 @@ main .related-buttons-list button {
 }
 
 
+/* ---------------- Videos Relacionado ---------------- */
+main #sidebar-content .related-thumbnail .thumbnail-description * {
+    color: #9b9b9b;
+    font-size: 1.2em;
+}
+main #sidebar-content .related-thumbnail .thumbnail-description h3 {
+    color: white;
+    font-size: 1.8em;
+}
 /* ------------------ Media Queries ------------------ */
 
-@media (min-width: 450px) {
+@media (min-width: 450px)  {
     nav {
         gap: 0em;
     }
@@ -380,12 +388,20 @@ main .related-buttons-list button {
     }
 }
 
-@media (min-width: 1050) {
+@media (min-width: 1050px) {
     main.container {
         display: grid;
         justify-items: center;
-        grid-template-columns: 64px 1fr 1fr;
+        grid-template-columns: 1fr auto;
         grid-template-rows: 1fr 1fr;
-
+    }
+    nav#vertical-nav {
+        display: none;
+    }
+    .container#center {
+        order: 1;
+    }
+    .container#sidebar-content { 
+        order: 2;
     }
 }
