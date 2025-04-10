@@ -312,9 +312,10 @@ main .description-body>h2 {
 main .description-body>button {
     font-size: 1em;
 }
+
 /* ------------------ Media Queries ------------------ */
 
-@media (min-width: 450px) {
+@media (min-width: 450px)  {
     nav {
         gap: 0em;
     }
@@ -339,12 +340,21 @@ main .description-body>button {
     }
 }
 
-@media (min-width: 1050) {
+@media (min-width: 1050px) {
     main.container {
         display: grid;
         justify-items: center;
-        grid-template-columns: 64px 1fr 1fr;
+        grid-template-columns: 3fr 1fr;
         grid-template-rows: 1fr 1fr;
 
+    }
+    nav#vertical-nav {
+        display: none;
+    }
+    .container#center {
+        order: 1;
+    }
+    .container#sidebar-content { 
+        order: 2;
     }
 }
