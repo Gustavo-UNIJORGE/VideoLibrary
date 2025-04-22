@@ -148,7 +148,7 @@
     </aside>
     <main class="container">
         
-        <div id="center">
+        <section id="center">
             <div id="video-container">
                 <iframe 
                     src="https://www.youtube.com/embed/xaHX_GEnP3M"
@@ -162,9 +162,11 @@
             <div id="description">
                 <h2 id="video-title">Titulo do Vídeo</h2>
                 <div class="description-header">
-                    <a class="channel-container">
+                    <a 
+                        class="channel-container"
+                        href="https://www.youtube.com/@gustavogaiofato">
                         <div class="channel-image-container">
-                            <img draggable="false" width="40" src="images/img.jfif" />
+                            <img draggable="false" width="40" src="images/channel_profile.jpg" />
                         </div>
                         <div class="channel-details-container">
                             <h3>Gustavo Gaiofato</h3>
@@ -252,8 +254,8 @@
                     </button>
                 </div>
             </div>
-        </div>
-        <div id="related">
+        </section>
+        <section id="related">
             <div class="related-buttons-list">
                 <button class="selected">
                     Todos
@@ -399,10 +401,17 @@
             </div>
             <div>
             </div>
-        </div>
-        <div>
-            comentarios
-        </div>
+        </section>
+        <section id="comments">
+            <hr>
+            <div class="header">
+                <b>6.643 comentários</b>
+                <button>
+                    <i class="fa-solid fa-list"></i>
+                    <span>Ordenar por </span>
+                </button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

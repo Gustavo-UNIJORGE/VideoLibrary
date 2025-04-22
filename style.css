@@ -1,3 +1,8 @@
+:root {
+    --background-black: #000000;
+    --background-grey: #242424;
+}
+
 @font-face {
     font-family: 'Youtube Sans Light';
     src: url('/fonts/youtube-sans-light.ttf') format('truetype');
@@ -27,6 +32,8 @@ body {
     display: grid;
     grid-template-rows: 58px 1fr;
     overflow-x: hidden;
+    color: #fff;
+    background-color: #111111;
 }
 
 nav {
@@ -69,61 +76,7 @@ nav>#center {
 nav#horizontal-nav {
     height: 56px;
 }
-/* ------------------ Botões ------------------ */
-button {
-    background-color: transparent;
-    color: white;
-    font-weight: 700;
-    border: solid thin transparent;
-    cursor: pointer;
-}
-
-button>img {
-    height: inherit;
-    width: inherit;
-    object-fit: cover;
-    aspect-ratio: 1/1;   
-    
-}
-button.icon-button {
-    height: 64px;
-    width: 64px;
-    border-radius: 50%;
-
-}
-button.primary-button {
-    padding: 0 1em;
-    background-color: #242424;
-    color: white;
-    border-radius: 32px;
-}
-button.secondary-button, main .related-buttons-list button.selected {
-    padding: 0 1em;
-    background-color: white;
-    color: black;
-    border-radius: 32px;
-}
-button.tertiary-button {
-    padding: 0.5em 0.75em;
-    color: #50a0fc;
-    border: solid #414040 2px;
-    border-radius: 32px;
-}
-button:hover {
-    background-color: rgba(128, 128, 128, 0.452);
-    transition: background-color ease-in-out 0.25s;
-}
-
-button.tertiary-button:hover {
-    background-color: #50a0fc4d;
-    border: solid transparent 2px;
-}
-
-h3 {
-    font-weight: 500;
-}
-
-/* ------------------ Search ------------------ */
+/* --- --------------- Search ------------------ */
 .search-form {
     display: flex;
     flex-flow: row;
@@ -199,10 +152,66 @@ nav#vertical-nav>button {
 nav#vertical-nav>button>span {
     font: 500;
 }
+/* ------------------ Botões ------------------ */
+button {
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    border: solid thin transparent;
+    cursor: pointer;
+}
+
+button>img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    aspect-ratio: 1/1;   
+    
+}
+button.icon-button {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+
+}
+button.primary-button {
+    padding: 0 1em;
+    background-color: var(--background-grey);
+    color: white;
+    border-radius: 32px;
+}
+button.secondary-button, main .related-buttons-list button.selected {
+    padding: 0 1em;
+    background-color: white;
+    color: black;
+    border-radius: 32px;
+}
+button.tertiary-button {
+    padding: 0.5em 0.75em;
+    color: #50a0fc;
+    border: solid #414040 2px;
+    border-radius: 32px;
+}
+button:hover {
+    background-color: rgba(128, 128, 128, 0.452);
+    transition: background-color ease-in-out 0.25s;
+}
+
+button.tertiary-button:hover {
+    background-color: #50a0fc4d;
+    border: solid transparent 2px;
+}
+
+h3 {
+    font-weight: 500;
+}
 /* ------------------ * ------------------ */
 main {
-    color: #fff;
-    background-color: #111111;
+    margin: 0 6em
+}
+/* ------------------ Video Main Section ------------------ */
+section#center {
+    margin: 2em
 }
 #video-container iframe{
     width: 100%;
@@ -239,6 +248,10 @@ main #center .description-header>.container {
 }
 main #center .description-header>.container#end {
     margin-left: 24px;
+}
+a.channel-container {
+    color: white;
+    text-decoration: none;
 }
 .channel-container {
     display: flex;
@@ -296,7 +309,7 @@ main #description .description-header .feedback-shape *:last-child {
 main #description .description-body { 
     font-size: 1.1em;
     padding: 1em;
-    background-color: #242424;
+    background-color: var(--background-grey);
     border-radius: 12px;
 }
 main #description .description-body .description-details {
@@ -383,7 +396,7 @@ main  #related .related-buttons-list {
 
 main #related .related-buttons-list button {
     padding: 1em 1.5em;
-    background-color: #242424;
+    background-color: var(--background-grey);
     color: white;
     border-radius: 24px;
 }
@@ -484,6 +497,19 @@ main a.thumbnail-description figure.thumbnail-video:hover .video-options i {
     color: #ffffffa4;
     background-color: #242424cb;
     transition: all ease-in 0.5s;
+}
+/* ------------------ Comments Section ------------------ */
+section#comments {
+    width: 100%;
+    margin: 2em;
+}
+section#comments hr {
+    margin: 0 2em;
+    border: solid var(--background-grey) 1px;
+}
+section#comments .header {
+    padding: 3rem 2rem;
+    font-size: 2.0em;
 }
 /* ------------------ Media Queries ------------------ */
 
