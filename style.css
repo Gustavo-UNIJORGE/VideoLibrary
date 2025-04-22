@@ -65,8 +65,9 @@ nav>#center {
     flex-grow: 1;
     
 }
-nav span {
-    font-family: 'Youtube Sans Medium', sans-serif;
+/* ------------------ Horizontal Navbar ------------------ */
+nav#horizontal-nav {
+    height: 56px;
 }
 /* ------------------ Botões ------------------ */
 button {
@@ -171,7 +172,17 @@ h3 {
 }
 
 /* ------------------ Vertical Nav Bar ------------------ */
-
+aside {
+    z-index: 15;
+    position: absolute;
+    left: 0;
+    top: 56px;
+    display: block;
+    height: 100%;
+}
+aside.hidden {
+    display: none;
+}
 nav#vertical-nav {
     background-color: black;
     display: flex;
@@ -180,17 +191,22 @@ nav#vertical-nav {
     height: 100%;
     gap: 0em;
 }
-
-nav#vertical-nav button {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+nav#vertical-nav>button {
+    border-radius: 16px; 
+    padding: 1em;
+    gap: 12px;
+}
+nav#vertical-nav>button>span {
+    font: 500;
 }
 /* ------------------ * ------------------ */
 main {
     color: #fff;
     background-color: #111111;
+}
+#video-container iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 /* ------------------ Description ------------------ */
 main #description {
@@ -471,12 +487,9 @@ main a.thumbnail-description figure.thumbnail-video:hover .video-options i {
 }
 /* ------------------ Media Queries ------------------ */
 
-@media (min-width: 450px)  {
+@media (min-width: 450px) and (max-width: 1049px)  {
     nav {
         gap: 0em;
-    }
-    nav#vertical-nav {
-        display: none;
     }
     main.container {
         display: grid;
@@ -490,17 +503,23 @@ main a.thumbnail-description figure.thumbnail-video:hover .video-options i {
     #video-container {
         border-radius: 16px;
     }
-    #video-container iframe{
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
+
     main #description .description-body.hidden>p {
         line-clamp: 1;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
     }
-
+    aside nav#vertical-nav button {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    aside nav#vertical-nav {
+        width: 64px;
+        padding-top: 0;
+    }
 }
 
 @media (min-width: 1050px) {
@@ -510,9 +529,6 @@ main a.thumbnail-description figure.thumbnail-video:hover .video-options i {
         justify-items: center;
         grid-template-columns: 1fr auto;
         grid-template-rows: 1fr 1fr;
-    }
-    nav#vertical-nav {
-        display: none;
     }
     .container#center {
         order: 1;
@@ -525,5 +541,19 @@ main a.thumbnail-description figure.thumbnail-video:hover .video-options i {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
+    }
+    nav#horizontal-nav {
+        padding: 0 0.5em;
+    }
+    aside nav#vertical-nav {
+        width: 240px;
+        padding: 1em 0.5em;
+        padding-top: 0;
+    }
+    aside nav#vertical-nav button {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
     }
 }

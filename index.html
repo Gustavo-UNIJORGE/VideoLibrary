@@ -40,19 +40,39 @@
                 hideButton.textContent = "Mostrar menos";
             }
         }
+        function showVerticalNav(button) {
+            let verticalNavContainer = document.querySelector('aside');
+
+            verticalNavContainer.classList.toggle('hidden');
+
+            let mainContainer = document.querySelector('main.container');
+            if (verticalNavContainer.classList.contains('hidden'))
+                mainContainer.style.opacity = 1.0;  
+            else 
+                mainContainer.style.opacity = 0.5;
+
+        }
         document.addEventListener("DOMContentLoaded", function () {
             let clearSearchButton = document.getElementById("clear-search-button");
             let descriptionText = document.querySelector('#description .description-body'); 
+            let verticalNavContainer = document.querySelector('aside');
 
-            clearSearchButton.classList.toggle("hidden");
+            clearSearchButton.classList.add("hidden");
 
-            descriptionText.classList.toggle("hidden");
+            descriptionText.classList.add("hidden");
+
+            verticalNavContainer.classList.add('hidden');
+
+            let verticalNavButton = document.querySelector('#menu-nav-button')
+            verticalNavButton.addEventListener('click', () => showVerticalNav(this))
         })
-
     </script>
-    <nav>
+    <nav class="horizontal-nav">
         <div id="start">
-            <button class="icon-button">
+            <button 
+                id="menu-nav-button"
+                class="icon-button" 
+                click="showVerticalNav(this)">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <span class="brand">
@@ -102,29 +122,32 @@
             </button>
         </div>
     </nav>
-    <main class="container">
+    <aside>
         <nav id="vertical-nav">
-            <button class="icon-button">
+            <button>
                 <i class="fa-solid fa-home"></i>
                 <span>Home</span>
             </button>
-            <button class="icon-button">
+            <button>
                 <i class="fa-solid fa-chart-simple"></i>
                 <span>Shorts</span>
             </button>
-            <button class="icon-button">
+            <button>
                 <i class="fa-solid fa-film"></i>
                 <span>Inscrições</span>
             </button>
-            <button class="icon-button">
+            <button>
                 <i class="fa-solid fa-user"></i>
                 <span>Você</span>
             </button>
-            <button class="icon-button">
+            <button>
                 <i class="fa-solid fa-clock"></i>
                 <span>Histórcio</span>
             </button>
         </nav>
+    </aside>
+    <main class="container">
+        
         <div id="center">
             <div id="video-container">
                 <iframe 
