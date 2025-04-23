@@ -1,6 +1,7 @@
 :root {
     --background-black: #000000;
     --background-grey: #242424;
+    --background-light-grey: #9b9b9b;
 }
 
 @font-face {
@@ -262,8 +263,8 @@ a.channel-container {
 /* Channel Profile Photo */
 .channel-image-container {
     margin-right: 12px;
-    height: 40px;
-    width: 40px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -510,6 +511,137 @@ section#comments hr {
 section#comments .header {
     padding: 3rem 2rem;
     font-size: 2.0em;
+}
+section#comments .body {
+    padding: 3rem 2rem;
+    padding-top: 0;
+}
+.user-comment {
+    gap: 1em;
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "photo text text"
+        "photo emoji buttons"
+        "photo . .";
+}
+.user-comment figure {
+    grid-area: photo;
+}
+.user-comment>figure>img {
+    height: inherit;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+/* User Comment Input */
+.user-comment>input {
+    grid-area: text;
+
+    height: 32px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid var(--background-grey) 1px;
+}
+.user-comment>input:focus {
+    outline: none;
+    border-bottom: solid white 2px;
+}
+/* User Comment Buttons */
+.user-comment>button#emoji-button {
+    grid-area: emoji;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%
+}
+.user-comment>button#emoji-button i {
+    font-size: 24px;
+}
+.user-comment>.controls-button {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    gap: 1em;
+}
+/* Comment */
+/* Comments List */
+ul.comments-list {
+    padding: 0;
+    list-style-type: none;
+} 
+li.comment figure {
+    width: 48px;
+    height: 48px;
+} 
+li.comment figure img {
+    width: inherit;
+    height: inherit;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+}
+/*  */
+li.comment {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: 2em;
+    align-items: start;
+    padding-bottom: 2.5em;
+}
+li.comment .comment-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+li.comment .comment-details span {
+    font-size: 0.95em;
+    color: var(--background-light-grey);
+}
+li.comment .comment-details p {
+    text-align: justify;
+}
+li.comment button {
+    height: 32px;
+    width: 32px;
+    font-size: 2em;
+    border-radius: 50%;
+    align-self: start;
+}
+li.comment .comments-controls-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1rem;
+    gap: 1em;
+}
+li.comment .comments-controls-list .like-comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+li.comment .comments-controls-list .like-comment span {
+    font-size: 1.5em;
+}
+li.comment .comments-controls-list button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+li.comment .comments-controls-list button.comment-button {
+    width: auto;
+    font-size: 1.25rem;
+    padding: 0.5em 1em;
+    border-radius: 16px;
+}
+li.comment .comments-controls-list button.comment-button span {
+    color: white;
+    font-weight: 400;
 }
 /* ------------------ Media Queries ------------------ */
 
